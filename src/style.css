@@ -1,1 +1,25 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-color: #0e7e12;
+}
+.card {
+  background-color: white;
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 5%;
+  padding: 5px;
+}
+.red-heart {
+  color: red;
+}
+#symbol1 {
+  font-size: 350%;
+}
+#value {
+  font-size: 500%;
+  text-align: center;
+}
+#symbol2 {
+  transform: rotate(180deg);
+  font-size: 350%;
+}
