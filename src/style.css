@@ -8,9 +8,13 @@ body {
   margin: 0 auto;
   margin-top: 5%;
   padding: 5px;
+  box-shadow: 6px 7px 20px 0px;
 }
 .red-suit {
   color: red;
+}
+.black-suit {
+  color: black;
 }
 #symbol1 {
   font-size: 350%;
@@ -26,7 +30,8 @@ body {
 #reloadButton {
   background-color: whitesmoke;
   border-radius: 5px;
-  padding: 7px;
+  padding: 10px;
   font-weight: 600;
-  margin: 5% 43%;
+  margin: 13px 43%;
+  box-shadow: 6px 7px 20px 0px;
 }

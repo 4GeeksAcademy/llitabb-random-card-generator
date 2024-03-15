@@ -12,8 +12,7 @@ import "./assets/img/4geeks.ico";
 // DONE - asociar al HTML para que aparezca en el navegador
 // DONE - hacer que cuando aparezca el simbolo ♥ sea de color rojo
 // DONE - estilizar
-
-window.onload = function() {
+window.generateRandomCard = function() {
   let symbols = ["♦", "♥", "♠", "♣"];
   let value = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "J", "Q", "K"];
 
@@ -34,14 +33,20 @@ window.onload = function() {
   if (randomSymbol === "♥" || randomSymbol === "♦") {
     document.getElementById("symbol1").classList.add("red-suit");
     document.getElementById("symbol2").classList.add("red-suit");
+  } else {
+    // Si el símbolo no es ♥ ni ♦, eliminar la clase "red-suit" si está presente
+    symbol1.classList.remove("red-suit");
+    symbol2.classList.remove("red-suit");
   }
+};
 
-  // Con el siguiente código se puede automatizar el color, pudiendo evitar la clase CSS
-  //let color = ["♦", "♥"].includes(randomSymbol) ? "red" : "black";
-  //document.getElementById("symbol1").style.color = color;
-  //document.getElementById("symbol2").style.color = color;
+// Con el siguiente código se puede automatizar el color, pudiendo evitar la clase CSS
+//let color = ["♦", "♥"].includes(randomSymbol) ? "red" : "black";
+//document.getElementById("symbol1").style.color = color;
+//document.getElementById("symbol2").style.color = color;
 
+window.onload = function() {
   document.getElementById("reloadButton").addEventListener("click", function() {
-    location.reload();
+    generateRandomCard();
   });
 };
