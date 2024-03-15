@@ -9,7 +9,7 @@ body {
   margin-top: 5%;
   padding: 5px;
 }
-.red-heart {
+.red-suit {
   color: red;
 }
 #symbol1 {
@@ -22,4 +22,11 @@ body {
 #symbol2 {
   transform: rotate(180deg);
   font-size: 350%;
+}
+#reloadButton {
+  background-color: whitesmoke;
+  border-radius: 5px;
+  padding: 7px;
+  font-weight: 600;
+  margin: 5% 43%;
 }

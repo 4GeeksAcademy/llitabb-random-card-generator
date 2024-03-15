@@ -20,13 +20,28 @@ window.onload = function() {
   let randomIndex = Math.floor(Math.random() * symbols.length);
   let randomSymbol = symbols[randomIndex];
 
-  document.getElementById("symbol1").innerHTML = randomSymbol;
-  document.getElementById("symbol2").innerHTML = randomSymbol;
+  let symbol1 = document.getElementById("symbol1");
+  let symbol2 = document.getElementById("symbol2");
+  symbol1.innerHTML = randomSymbol;
+  symbol2.innerHTML = randomSymbol;
+
+  //El siguiente código está refactorizado en las lineas 23-26 para evitar que el código tenga que acceder al DOM repetidas veces por su ID
+  //-> document.getElementById("symbol1").innerHTML = randomSymbol;
+  //-> document.getElementById("symbol2").innerHTML = randomSymbol;
   document.getElementById("value").innerHTML =
     value[Math.floor(Math.random() * value.length)];
 
-  if (randomSymbol === "♥") {
-    document.getElementById("symbol1").classList.add("red-heart");
-    document.getElementById("symbol2").classList.add("red-heart");
+  if (randomSymbol === "♥" || randomSymbol === "♦") {
+    document.getElementById("symbol1").classList.add("red-suit");
+    document.getElementById("symbol2").classList.add("red-suit");
   }
+
+  // Con el siguiente código se puede automatizar el color, pudiendo evitar la clase CSS
+  //let color = ["♦", "♥"].includes(randomSymbol) ? "red" : "black";
+  //document.getElementById("symbol1").style.color = color;
+  //document.getElementById("symbol2").style.color = color;
+
+  document.getElementById("reloadButton").addEventListener("click", function() {
+    location.reload();
+  });
 };
