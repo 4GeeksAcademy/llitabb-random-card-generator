@@ -22,7 +22,14 @@
       <div id="value"></div>
       <div id="symbol2"></div>
     </div>
-    <button id="reloadButton">Click for New Card</button>
+    <div class="values">
+      <button id="reloadButton">Click for New Card</button>
+      <label for="height">Height:</label>
+      <input type="number" id="height" placeholder="Write height" />
+      <label for="width">Width:</label>
+      <input type="number" id="width" placeholder="Write width" />
+      <button id="changeSizeButton" onclick="changeSize()">Change size</button>
+    </div>
     <div class="fixed-bottom p-4">
       Made with ❤️ by Llitabb
     </div>

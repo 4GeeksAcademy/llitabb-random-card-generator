@@ -10,6 +10,10 @@ body {
   padding: 5px;
   box-shadow: 6px 7px 20px 0px;
 }
+.values {
+  margin: 5%;
+}
+
 .red-suit {
   color: red;
 }
@@ -26,6 +30,14 @@ body {
 #symbol2 {
   transform: rotate(180deg);
   font-size: 350%;
+}
+
+#changeSizeButton {
+  background-color: whitesmoke;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: 600;
+  box-shadow: 6px 7px 20px 0px;
 }
 #reloadButton {
   background-color: whitesmoke;
