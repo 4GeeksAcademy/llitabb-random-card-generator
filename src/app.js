@@ -29,6 +29,7 @@ window.generateRandomCard = function() {
 };
 
 window.onload = function() {
+  generateRandomCard();
   document.getElementById("reloadButton").addEventListener("click", function() {
     generateRandomCard();
   });
